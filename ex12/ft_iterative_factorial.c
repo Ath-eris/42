@@ -1,19 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_is_negative.c                                   :+:      :+:    :+:   */
+/*   ft_iterative_factorial.c                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mbonati <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/07 18:19:05 by mbonati           #+#    #+#             */
-/*   Updated: 2018/11/07 18:24:37 by mbonati          ###   ########.fr       */
+/*   Created: 2018/11/07 19:00:20 by mbonati           #+#    #+#             */
+/*   Updated: 2018/11/07 19:42:54 by mbonati          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_is_negative(int n)
+int	ft_iterative_factorial(int nb)
 {
-	if (n < 0)
-		ft_putchar('N');
-	else
-		ft_putchar('P');
+	int result;
+
+	result = nb;
+	if (nb < 0 || nb > 12)
+		return (0);
+	if (nb == 0 || nb == 1)
+		return (1);
+	while (nb > 1)
+	{
+		result *= nb - 1;
+		nb--;
+	}
+	return (result);
 }

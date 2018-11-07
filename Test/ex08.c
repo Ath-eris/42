@@ -4,7 +4,7 @@ void	ft_is_negative(int n);
 
 int	main(int argc, char **argv)
 {
-	if(argc = 2)
+	if(argc == 2)
 		ft_is_negative(atoi(argv[1]));
 	return (0);
 }

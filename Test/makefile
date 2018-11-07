@@ -2,7 +2,6 @@ all:
 	gcc ex06.c ../ft_putchar.c ../ex06/ft_print_alphabet.c -o ex06.out
 	gcc ex07.c ../ft_putchar.c ../ex07/ft_print_numbers.c -o ex07.out
 	gcc ex08.c ../ft_putchar.c ../ex08/ft_is_negative.c -o ex08.out
-	gcc ex09.c ../ex09/ft_ft.c -o ex09.out
 	gcc ex10.c ../ex10/ft_swap.c -o ex10.out
 	gcc ex11.c ../ex11/ft_div_mod.c -o ex11.out
 	gcc ex12.c ../ex12/ft_iterative_factorial.c -o ex12.out
