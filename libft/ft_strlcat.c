@@ -1,30 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strmap.c                                        :+:      :+:    :+:   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mbonati <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/12 17:08:32 by mbonati           #+#    #+#             */
-/*   Updated: 2018/11/12 17:44:12 by mbonati          ###   ########.fr       */
+/*   Created: 2018/11/12 14:54:12 by mbonati           #+#    #+#             */
+/*   Updated: 2018/11/12 16:53:31 by mbonati          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <string.h>
 #include "libft.h"
 
-char	*ft_strmap(char const *s, char (*f)(char))
+size_t	ft_strlcat(char *dest, const char *src, size_t n)
 {
-	char *tab;
 	int i;
+	int y;
 
-	if (!(tab = malloc(sizeof(char) * (ft_strlen(s) + 1))))
-		return (NULL);
-	i = 0;
-	while (s[i])
+	i = ft_strlen(dest);
+	y = 0;
+	while (i < n - 1)
 	{
-		tab[i] = f(s[i]);
+		dest[i] = src[y];
 		i++;
+		y++;
 	}
-	tab[i] = '\0';
-	return (tab);
+	dest[i] = '\0';
+	if (i < )
+		return (i + ft_strlen(src));
+	else
+		return (strlen(src) + strlen(dest));
+
 }

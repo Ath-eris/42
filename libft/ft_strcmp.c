@@ -1,30 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strmap.c                                        :+:      :+:    :+:   */
+/*   ft_strcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mbonati <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/12 17:08:32 by mbonati           #+#    #+#             */
-/*   Updated: 2018/11/12 17:44:12 by mbonati          ###   ########.fr       */
+/*   Created: 2018/11/12 14:00:21 by mbonati           #+#    #+#             */
+/*   Updated: 2018/11/12 14:29:16 by mbonati          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strmap(char const *s, char (*f)(char))
+int	ft_strcmp(const char *s1, const char *s2)
 {
-	char *tab;
 	int i;
 
-	if (!(tab = malloc(sizeof(char) * (ft_strlen(s) + 1))))
-		return (NULL);
 	i = 0;
-	while (s[i])
-	{
-		tab[i] = f(s[i]);
+	while (s1[i] && s2[i] && s1[i] == s2[i])
 		i++;
-	}
-	tab[i] = '\0';
-	return (tab);
+	return (s1[i] - s2[i]);
 }
