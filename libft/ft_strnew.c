@@ -6,7 +6,7 @@
 /*   By: mbonati <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/14 14:28:09 by mbonati           #+#    #+#             */
-/*   Updated: 2018/11/14 14:28:11 by mbonati          ###   ########.fr       */
+/*   Updated: 2018/11/16 20:56:16 by mbonati          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 char	*ft_strnew(size_t size)
 {
-	char *tab;
-	size_t i;
-	
+	char	*tab;
+	size_t	i;
+
 	if (!(tab = malloc(sizeof(char) * (size + 1))))
 		return (NULL);
 	i = 0;

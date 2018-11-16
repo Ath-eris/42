@@ -6,7 +6,7 @@
 /*   By: mbonati <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/12 13:27:56 by mbonati           #+#    #+#             */
-/*   Updated: 2018/11/12 14:33:59 by mbonati          ###   ########.fr       */
+/*   Updated: 2018/11/16 20:57:29 by mbonati          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,11 +23,11 @@ char	*ft_strstr(const char *str, const char *to_find)
 	if (to_find[0] == '\0')
 		return (str);
 	while (str[i_str])
-	{	
+	{
 		while (str[i_str + i_tf] == to_find[i_tf] && to_find[i_tf])
 			i_tf++;
 		if (to_find[i_tf] == '\0')
-			return (&str[i_str])
+			return (&str[i_str]);
 		i_str++;
 	}
 	return (NULL);
