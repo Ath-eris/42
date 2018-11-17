@@ -6,11 +6,11 @@
 /*   By: mbonati <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/12 16:54:30 by mbonati           #+#    #+#             */
-/*   Updated: 2018/11/12 17:07:13 by mbonati          ###   ########.fr       */
+/*   Updated: 2018/11/17 17:40:42 by mbonati          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ibft.h"
+#include "libft.h"
 
 void	ft_striter(char *s, void (*f)(char *))
 {

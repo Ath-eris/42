@@ -6,13 +6,16 @@
 /*   By: mbonati <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/10 11:33:18 by mbonati           #+#    #+#             */
-/*   Updated: 2018/11/12 15:37:42 by mbonati          ###   ########.fr       */
+/*   Updated: 2018/11/17 17:31:55 by mbonati          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-#include <stdlib.h>
-#include <string.h>
+#ifndef LIBFT_H
+# define LIBFT_H
+
+# include <unistd.h>
+# include <stdlib.h>
+# include <string.h>
 
 void	*ft_memalloc(size_t size);
 void	ft_memdel(void **ap);
@@ -66,3 +69,7 @@ int		ft_isascii(int c);
 int		ft_isprint(int c);
 int		ft_toupper(int c);
 int		ft_tolower(int c);
+int		ft_isspace(int c);
+int		ft_intsize(int n);
+
+#endif

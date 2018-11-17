@@ -6,7 +6,7 @@
 /*   By: mbonati <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/14 14:35:17 by mbonati           #+#    #+#             */
-/*   Updated: 2018/11/14 14:40:50 by mbonati          ###   ########.fr       */
+/*   Updated: 2018/11/17 17:29:08 by mbonati          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,6 @@
 
 void	ft_putendl_fd(char const *s, int fd)
 {
-	write(fd, s'\n', ft_strlen(s));
+	write(fd, s, ft_strlen(s));
+	write(fd, "\n", 1);
 }

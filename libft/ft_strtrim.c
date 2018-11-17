@@ -6,7 +6,7 @@
 /*   By: mbonati <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/16 20:59:54 by mbonati           #+#    #+#             */
-/*   Updated: 2018/11/16 21:09:34 by mbonati          ###   ########.fr       */
+/*   Updated: 2018/11/17 16:55:18 by mbonati          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,31 +14,26 @@
 
 char	*ft_strtrim(char const *s)
 {
-	size_t	i;
-	size_t	y;
+	size_t	start;
+	size_t	end;
 	size_t	size;
 	char	*tab;
 
-	i = 0;
-	size = 0;
-	while (s[i])
-	{
-		if (s[i] != ' ' && s[i] != '\n' && s[i] != '\t')
-			size++;
-		i++;
-	}
+	start = 0;
+	while (s[start] == ' ' && s[start] == '\n' && s[start] == '\t')
+		start++;
+	end = ft_strlen(s);
+	while (s[end] == ' ' && s[end] == '\n' && s[end] == '\t')
+		end--;
+	size = end - start + 1;
 	if (!(tab = malloc(sizeof(char) * (size + 1))))
 		return (NULL);
-	i = 0;
-	y = 0;
-	while (s[i])
+	size = 0;
+	while (start <= end)
 	{
-		if (s[i] != ' ' && s[i] != '\n' && s[i] != '\t')
-		{
-			tab[y] = s[i];
-			y++;
-		i++;
-		}
+		tab[size] = s[start];
+		start++;
 	}
+	tab[size] = '\0';
 	return (tab);
 }
