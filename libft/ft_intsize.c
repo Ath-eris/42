@@ -15,12 +15,10 @@
 int	ft_intsize(int n)
 {
 	int size;
-	int i;
 
-	if (n < -2147483648 || n > 2147483647)
+	if (n < -2147483647 || n > 2147483646)
 		return (0);
 	size = 0;
-	i = 0;
 	if (n < 0)
 	{
 		n = -n;

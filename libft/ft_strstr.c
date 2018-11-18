@@ -16,20 +16,18 @@ char	*ft_strstr(const char *str, const char *to_find)
 {
 	size_t i_str;
 	size_t i_tf;
-	size_t i;
 
 	i_str = 0;
-	i = 0;
 	if (to_find[0] == '\0')
 		return ((char *)str);
 	i_tf = 0;
 	while (str)
 	{
-		while ((char)&str[i_str + i_tf] == (char)&to_find[i_tf]\
-				&& (char)&to_find[i_tf])
+		while (((char *)str)[i_str + i_tf] == ((char *)to_find)[i_tf]\
+				&& ((char *)to_find)[i_tf])
 			i_tf++;
-		if ((char)&to_find[i_tf] == '\0')
-			return ((char *)&str[i_str]);
+		if (((char *)to_find)[i_tf] == '\0')
+			return ((char *)str + i_str);
 		i_str++;
 	}
 	return (NULL);

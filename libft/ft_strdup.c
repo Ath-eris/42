@@ -15,7 +15,6 @@
 char	*ft_strdup(const char *s)
 {
 	char	*tab;
-	int		i;
 
 	if (!(tab = malloc(sizeof(char) * (ft_strlen(s) + 1))))
 		return (NULL);

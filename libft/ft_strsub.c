@@ -18,19 +18,16 @@ char	*ft_strsub(char const *s, unsigned int start, size_t len)
 	int		i;
 	char	*tab;
 
-	if (start < len)
+	size = len - start;
+	if (!(tab = malloc(sizeof(char) * (size + 1))))
+		return (NULL);
+	tab[size + 1] = '\0';
+	i = 0;
+	while (tab[i])
 	{
-		size = len - start;
-		if (!(tab = malloc(sizeof(char) * (size + 1))))
-			return (NULL);
-		tab[size + 1] = '\0';
-		i = 0;
-		while (tab[i])
-		{
-			tab[i] = s[start];
-			i++;
-			start++;
-		}
-		return (tab);
+		tab[i] = s[start];
+		i++;
+		start++;
 	}
+	return (tab);
 }
