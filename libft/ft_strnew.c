@@ -6,7 +6,7 @@
 /*   By: mbonati <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/14 14:28:09 by mbonati           #+#    #+#             */
-/*   Updated: 2018/11/16 20:56:16 by mbonati          ###   ########.fr       */
+/*   Updated: 2018/11/19 10:52:06 by mbonati          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,9 @@ char	*ft_strnew(size_t size)
 	if (!(tab = malloc(sizeof(char) * (size + 1))))
 		return (NULL);
 	i = 0;
-	while (tab[i])
+	while (i < size)
 	{
-		tab[size] = '\0';
+		tab[i] = '\0';
 		i++;
 	}
 	tab[i] = '\0';

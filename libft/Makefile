@@ -6,7 +6,7 @@
 #    By: mbonati <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/12 10:33:17 by mbonati           #+#    #+#              #
-#    Updated: 2018/11/19 08:55:46 by mbonati          ###   ########.fr        #
+#    Updated: 2018/11/19 09:12:43 by mbonati          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -65,6 +65,7 @@ FILE = ft_putendl_fd.c\
 	   ft_putendl.c\
 	   ft_strdup.c\
 	   ft_strnequ.c\
+	   ft_itoa.c\
 
 OBJET = $(FILE:.c=.o)
 

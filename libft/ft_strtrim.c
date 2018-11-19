@@ -6,7 +6,7 @@
 /*   By: mbonati <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/16 20:59:54 by mbonati           #+#    #+#             */
-/*   Updated: 2018/11/17 16:55:18 by mbonati          ###   ########.fr       */
+/*   Updated: 2018/11/19 09:57:42 by mbonati          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ char	*ft_strtrim(char const *s)
 	start = 0;
 	while (s[start] == ' ' && s[start] == '\n' && s[start] == '\t')
 		start++;
-	end = ft_strlen(s);
+	end = ft_strlen(s) + 1;
 	while (s[end] == ' ' && s[end] == '\n' && s[end] == '\t')
 		end--;
 	size = end - start + 1;

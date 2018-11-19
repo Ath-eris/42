@@ -6,7 +6,7 @@
 /*   By: mbonati <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/13 20:53:46 by mbonati           #+#    #+#             */
-/*   Updated: 2018/11/13 20:57:04 by mbonati          ###   ########.fr       */
+/*   Updated: 2018/11/19 13:09:03 by mbonati          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 void	ft_memdel(void **ap)
 {
-	if (!(ap == NULL))
+	if (ap != NULL)
 	{
 		free(*ap);
-		ap = NULL;
+		*ap = NULL;
 	}
 }

@@ -6,7 +6,7 @@
 /*   By: mbonati <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/13 22:44:00 by mbonati           #+#    #+#             */
-/*   Updated: 2018/11/19 07:34:49 by mbonati          ###   ########.fr       */
+/*   Updated: 2018/11/19 09:22:32 by mbonati          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,5 +50,5 @@ char			*ft_itoa(int n)
 		puissance *= 10;
 		size--;
 	}
-	return (ft_filling(i, puissance, n, &result));
+	return (ft_filling(i, puissance, n, result));
 }

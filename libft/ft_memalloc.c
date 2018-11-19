@@ -6,7 +6,7 @@
 /*   By: mbonati <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/14 17:35:11 by mbonati           #+#    #+#             */
-/*   Updated: 2018/11/17 17:40:14 by mbonati          ###   ########.fr       */
+/*   Updated: 2018/11/19 10:49:54 by mbonati          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,11 @@ void	*ft_memalloc(size_t size)
 	char	*tab;
 
 	if (!(tab = malloc(sizeof(char) * size)))
-		return (0);
+		return (NULL);
 	while (size > 0)
 	{
 		tab[size] = 0;
+		ft_putchar(tab[size]);
 		size--;
 	}
 	return (tab);

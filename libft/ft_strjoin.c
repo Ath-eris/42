@@ -6,7 +6,7 @@
 /*   By: mbonati <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/16 19:22:08 by mbonati           #+#    #+#             */
-/*   Updated: 2018/11/16 19:23:21 by mbonati          ###   ########.fr       */
+/*   Updated: 2018/11/19 10:07:05 by mbonati          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 {
 	size_t	size;
 	size_t	i;
+	size_t	y;
 	char	*tab;
 
 	size = ft_strlen(s1) + ft_strlen(s2) + 1;
@@ -27,12 +28,12 @@ char	*ft_strjoin(char const *s1, char const *s2)
 		tab[i] = s1[i];
 		i++;
 	}
-	i = 0;
-	while (s2[i])
+	y = 0;
+	while (s2[y])
 	{
-		tab[i] = s2[i];
+		tab[i + y] = s2[y];
 		i++;
 	}
-	tab[i] = '\0';
+	tab[i + y] = '\0';
 	return (tab);
 }

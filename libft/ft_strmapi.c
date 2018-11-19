@@ -6,7 +6,7 @@
 /*   By: mbonati <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/12 17:28:46 by mbonati           #+#    #+#             */
-/*   Updated: 2018/11/16 19:19:03 by mbonati          ###   ########.fr       */
+/*   Updated: 2018/11/19 11:01:49 by mbonati          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,9 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	i = 0;
 	while (s[i])
 	{
-		f(i, s[i]);
+		tab[i] = f(i, s[i]);
 		i++;
 	}
+	tab[i] = '\0';
 	return (tab);
 }
