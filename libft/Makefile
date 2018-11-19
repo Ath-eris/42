@@ -6,7 +6,7 @@
 #    By: mbonati <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/12 10:33:17 by mbonati           #+#    #+#              #
-#    Updated: 2018/11/17 17:48:04 by mbonati          ###   ########.fr        #
+#    Updated: 2018/11/19 08:55:46 by mbonati          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,7 +24,7 @@ FILE = ft_putendl_fd.c\
 	   ft_striteri.c\
 	   ft_strrchr.c\
 	   ft_atoi.c\
-	   ft_memchrc.c\
+	   ft_memchr.c\
 	   ft_putstr.c\
 	   ft_strjoin.c\
 	   ft_strsplit.c\
@@ -68,12 +68,12 @@ FILE = ft_putendl_fd.c\
 
 OBJET = $(FILE:.c=.o)
 
-CC = gcc
+#CC = gcc
 
-CFLAGS = -Wall -Wextra -Werror -I .
+#CFLAGS = -Wall -Wextra -Werror -I .
 
 $(NAME): $(OBJET)
-	#gcc -c -Wall -Wextra -Werror $(FILE) libft.h
+	gcc -c -Wall -Wextra -Werror $(FILE) libft.h
 	ar rc $(NAME) $(OBJET)
 	ranlib $(NAME)
 

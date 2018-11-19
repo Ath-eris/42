@@ -6,13 +6,13 @@
 /*   By: mbonati <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/16 20:50:47 by mbonati           #+#    #+#             */
-/*   Updated: 2018/11/16 21:10:28 by mbonati          ###   ########.fr       */
+/*   Updated: 2018/11/19 07:36:01 by mbonati          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 
-int		count_lett(char *word, char c)
+static	int		count_lett(char *word, char c)
 {
 	int i;
 
@@ -24,7 +24,7 @@ int		count_lett(char *word, char c)
 	return (i);
 }
 
-char	*ft_extract_word(char *str, int *i, char c)
+static	char	*ft_extract_word(char *str, int *i, char c)
 {
 	char	*word;
 	int		i_word;
@@ -44,7 +44,7 @@ char	*ft_extract_word(char *str, int *i, char c)
 	return (word);
 }
 
-int		ft_count_word(char *str, char c)
+static	int		ft_count_word(char *str, char c)
 {
 	int i;
 	int nbr_mots;
@@ -63,7 +63,7 @@ int		ft_count_word(char *str, char c)
 	return (nbr_mots);
 }
 
-char	**ft_strsplit(char *str, char c)
+char			**ft_strsplit(char *str, char c)
 {
 	int		i;
 	int		y;
