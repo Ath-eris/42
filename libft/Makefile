@@ -6,7 +6,7 @@
 #    By: mbonati <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/12 10:33:17 by mbonati           #+#    #+#              #
-#    Updated: 2018/11/19 09:12:43 by mbonati          ###   ########.fr        #
+#    Updated: 2018/11/19 16:58:50 by mbonati          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -69,9 +69,7 @@ FILE = ft_putendl_fd.c\
 
 OBJET = $(FILE:.c=.o)
 
-#CC = gcc
-
-#CFLAGS = -Wall -Wextra -Werror -I .
+.PHONY = clean re fclean all
 
 $(NAME): $(OBJET)
 	gcc -c -Wall -Wextra -Werror $(FILE) libft.h
@@ -87,3 +85,4 @@ fclean: clean
 	rm $(NAME)
 
 re: fclean all
+

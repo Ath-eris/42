@@ -6,7 +6,7 @@
 /*   By: mbonati <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/13 22:44:00 by mbonati           #+#    #+#             */
-/*   Updated: 2018/11/19 15:10:23 by mbonati          ###   ########.fr       */
+/*   Updated: 2018/11/19 16:31:15 by mbonati          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,8 @@ char			*ft_itoa(int n)
 	if (!(result = malloc(sizeof(char) * (size + 1))))
 		return (NULL);
 	i = 0;
+	if (n == -2147483648)
+		return (ft_strdup("-2147483648"));
 	if (n < 0)
 	{
 		result[i] = '-';
