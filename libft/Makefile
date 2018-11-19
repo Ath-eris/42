@@ -6,7 +6,7 @@
 #    By: mbonati <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/12 10:33:17 by mbonati           #+#    #+#              #
-#    Updated: 2018/11/19 16:58:50 by mbonati          ###   ########.fr        #
+#    Updated: 2018/11/19 17:33:51 by mbonati          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -69,20 +69,19 @@ FILE = ft_putendl_fd.c\
 
 OBJET = $(FILE:.c=.o)
 
-.PHONY = clean re fclean all
+all: $(NAME)
 
 $(NAME): $(OBJET)
 	gcc -c -Wall -Wextra -Werror $(FILE) libft.h
-	ar rc $(NAME) $(OBJET)
+	ar rcs $(NAME) $(OBJET)
 	ranlib $(NAME)
-
-all: $(NAME)
 
 clean:
 	rm -rf $(OBJET)
 
 fclean: clean
-	rm $(NAME)
+	rm -rf $(NAME)
 
 re: fclean all
 
+.PHONY = clean re fclean all
