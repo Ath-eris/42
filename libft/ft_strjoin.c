@@ -6,7 +6,7 @@
 /*   By: mbonati <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/16 19:22:08 by mbonati           #+#    #+#             */
-/*   Updated: 2018/11/19 10:07:05 by mbonati          ###   ########.fr       */
+/*   Updated: 2018/11/19 13:52:12 by mbonati          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	while (s2[y])
 	{
 		tab[i + y] = s2[y];
-		i++;
+		y++;
 	}
 	tab[i + y] = '\0';
 	return (tab);

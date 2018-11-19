@@ -6,7 +6,7 @@
 /*   By: mbonati <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/14 15:05:11 by mbonati           #+#    #+#             */
-/*   Updated: 2018/11/17 17:32:06 by mbonati          ###   ########.fr       */
+/*   Updated: 2018/11/19 15:10:27 by mbonati          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,11 @@
 
 int	ft_intsize(int n)
 {
-	int size;
+	size_t			size;
+	unsigned int	u_n;
 
-	if (n < -2147483647 || n > 2147483646)
-		return (0);
 	size = 0;
+
 	if (n < 0)
 	{
 		n = -n;

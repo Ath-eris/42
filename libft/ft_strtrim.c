@@ -6,7 +6,7 @@
 /*   By: mbonati <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/16 20:59:54 by mbonati           #+#    #+#             */
-/*   Updated: 2018/11/19 09:57:42 by mbonati          ###   ########.fr       */
+/*   Updated: 2018/11/19 14:17:44 by mbonati          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,20 +20,20 @@ char	*ft_strtrim(char const *s)
 	char	*tab;
 
 	start = 0;
-	while (s[start] == ' ' && s[start] == '\n' && s[start] == '\t')
+	while (s[start] == ' ' || s[start] == '\n' || s[start] == '\t')
 		start++;
-	end = ft_strlen(s) + 1;
-	while (s[end] == ' ' && s[end] == '\n' && s[end] == '\t')
+	end = ft_strlen(s);
+	while ((s[end] == ' ' || s[end] == '\n' || s[end] == '\t'\
+			|| s[end] == '\0') && end > 0)
 		end--;
+	if (end == 0)
+		return (ft_strdup(""));
 	size = end - start + 1;
 	if (!(tab = malloc(sizeof(char) * (size + 1))))
 		return (NULL);
 	size = 0;
 	while (start <= end)
-	{
-		tab[size] = s[start];
-		start++;
-	}
+		tab[size++] = s[start++];
 	tab[size] = '\0';
 	return (tab);
 }
