@@ -6,7 +6,7 @@
 /*   By: mbonati <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/10 11:33:18 by mbonati           #+#    #+#             */
-/*   Updated: 2018/11/19 09:12:06 by mbonati          ###   ########.fr       */
+/*   Updated: 2018/11/20 18:56:25 by mbonati          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,5 +71,8 @@ int		ft_toupper(int c);
 int		ft_tolower(int c);
 int		ft_isspace(int c);
 int		ft_intsize(int n);
+char	*ft_strlowcase(char *s);
+char	*ft_strupcase(char *s);
+char	*ft_strndup(const char *s, size_t n);
 
 #endif

@@ -1,22 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_strndup.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mbonati <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/12 11:26:20 by mbonati           #+#    #+#             */
-/*   Updated: 2018/11/20 18:33:46 by mbonati          ###   ########.fr       */
+/*   Created: 2018/11/20 18:28:44 by mbonati           #+#    #+#             */
+/*   Updated: 2018/11/20 18:34:11 by mbonati          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strdup(const char *s)
+char	*ft_strndup(const char *s, size_t n)
 {
 	char	*tab;
 
-	if (!(tab = malloc(sizeof(char) * (ft_strlen(s) + 1))))
+	if (!(tab = malloc(sizeof(char) * (n + 1))))
 		return (NULL);
-	return (ft_strcpy(tab, s));
+	return (ft_strncpy(tab, s, n));
 }

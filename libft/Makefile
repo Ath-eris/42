@@ -6,7 +6,7 @@
 #    By: mbonati <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/12 10:33:17 by mbonati           #+#    #+#              #
-#    Updated: 2018/11/20 17:23:44 by mbonati          ###   ########.fr        #
+#    Updated: 2018/11/20 19:00:19 by mbonati          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -66,14 +66,22 @@ FILE = ft_putendl_fd.c\
 	   ft_strdup.c\
 	   ft_strnequ.c\
 	   ft_itoa.c\
+	   ft_strlowcase.c\
+	   ft_strupcase.c\
+	   ft_strndup.c\
 
 OBJET = $(FILE:.c=.o)
 
+CC = gcc
+
+CFLAGS = -Wall -Wextra -Werror
+
 all: $(NAME)
 
+$(OBJET): libft.h
+
 $(NAME): $(OBJET)
-	gcc -c -Wall -Wextra -Werror $(FILE) libft.h
-	ar rcs $(NAME) $(OBJET)
+	ar rc $(NAME) $(OBJET)
 	ranlib $(NAME)
 
 clean:
