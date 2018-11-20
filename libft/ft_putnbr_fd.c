@@ -6,7 +6,7 @@
 /*   By: mbonati <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/14 14:41:58 by mbonati           #+#    #+#             */
-/*   Updated: 2018/11/17 18:19:20 by mbonati          ###   ########.fr       */
+/*   Updated: 2018/11/20 17:04:04 by mbonati          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,11 @@ void	ft_putnbr_fd(int n, int fd)
 			n = -n;
 		}
 		if (n >= 10)
+		{
 			ft_putnbr_fd(n / 10, fd);
-		ft_putchar_fd(n % 10 + '0', fd);
+			ft_putnbr_fd(n % 10, fd);
+		}
+		else
+			ft_putchar_fd(n + '0', fd);
 	}
 }
