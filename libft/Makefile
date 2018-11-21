@@ -6,7 +6,7 @@
 #    By: mbonati <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/12 10:33:17 by mbonati           #+#    #+#              #
-#    Updated: 2018/11/20 19:00:19 by mbonati          ###   ########.fr        #
+#    Updated: 2018/11/21 14:51:33 by mbonati          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -69,6 +69,9 @@ FILE = ft_putendl_fd.c\
 	   ft_strlowcase.c\
 	   ft_strupcase.c\
 	   ft_strndup.c\
+	   ft_lstnew.c\
+	   ft_lstdelone.c\
+	   ft_lstdel.c\
 
 OBJET = $(FILE:.c=.o)
 
