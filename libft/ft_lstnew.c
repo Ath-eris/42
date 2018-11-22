@@ -6,7 +6,7 @@
 /*   By: mbonati <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/21 12:58:53 by mbonati           #+#    #+#             */
-/*   Updated: 2018/11/22 18:16:31 by mbonati          ###   ########.fr       */
+/*   Updated: 2018/11/22 18:52:15 by mbonati          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ t_list	*ft_lstnew(void const *content, size_t content_size)
 	{
 		list->content = NULL;
 		list->content_size = 0;
+		list->next = NULL;
 		return (list);
 	}
 	list->content = ft_strndup((char *)content, content_size);

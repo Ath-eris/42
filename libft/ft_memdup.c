@@ -1,26 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_memdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mbonati <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/16 18:36:53 by mbonati           #+#    #+#             */
-/*   Updated: 2018/11/22 18:49:03 by mbonati          ###   ########.fr       */
+/*   Created: 2018/11/22 18:40:51 by mbonati           #+#    #+#             */
+/*   Updated: 2018/11/22 18:54:56 by mbonati          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memcpy(void *dest, const void *src, size_t n)
+void	*ft_memdup(const void *src, size_t n)
 {
-	size_t	i;
+	void *dest;
 
-	i = 0;
-	while (i < n)
-	{
-		((char *)dest)[i] = ((char *)src)[i];
-		i++;
-	}
-	return (dest);
+	if (!(dest = malloc(n)))
+		return (NULL);
+	return (ft_memcpy(dest, src, n));
 }
