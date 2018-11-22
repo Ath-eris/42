@@ -6,7 +6,7 @@
 /*   By: mbonati <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/22 21:36:49 by mbonati           #+#    #+#             */
-/*   Updated: 2018/11/22 21:41:14 by mbonati          ###   ########.fr       */
+/*   Updated: 2018/11/22 23:48:09 by mbonati          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,4 +19,5 @@ void	ft_lstiter(t_list *lst, void (*f)(t_list *elem))
 		(*f)(lst);
 		lst = lst->next;
 	}
+	(*f)(lst);
 }
