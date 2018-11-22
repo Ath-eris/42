@@ -6,7 +6,7 @@
 /*   By: mbonati <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/10 11:33:18 by mbonati           #+#    #+#             */
-/*   Updated: 2018/11/21 15:06:43 by mbonati          ###   ########.fr       */
+/*   Updated: 2018/11/22 19:28:09 by mbonati          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,5 +83,9 @@ typedef struct		s_list
 t_list				*ft_lstnew(void const *content, size_t content_size);
 void				ft_lstdelone(t_list **alst, void(*del)(void *, size_t));
 void				ft_lstdel(t_list **alst, void(*del)(void *, size_t));
+void				*ft_memdup(const void *src, size_t n);
+void				ft_lstadd(t_list **alst, t_list *new);
+void				ft_lstiter(t_list *lst, void (*f)(t_list *elem));
+t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 
 #endif
