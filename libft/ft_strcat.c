@@ -6,7 +6,7 @@
 /*   By: mbonati <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/12 14:38:12 by mbonati           #+#    #+#             */
-/*   Updated: 2018/11/16 19:15:56 by mbonati          ###   ########.fr       */
+/*   Updated: 2018/11/22 22:53:58 by mbonati          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 char	*ft_strcat(char *dest, const char *src)
 {
-	int i;
-	int i_dest;
+	size_t i;
+	size_t i_dest;
 
 	i = 0;
 	i_dest = 0;

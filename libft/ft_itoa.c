@@ -6,13 +6,13 @@
 /*   By: mbonati <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/13 22:44:00 by mbonati           #+#    #+#             */
-/*   Updated: 2018/11/22 18:40:43 by mbonati          ###   ########.fr       */
+/*   Updated: 2018/11/22 23:01:47 by mbonati          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static	char	*ft_filling(int i, int puissance, int n, char *result)
+static	char	*ft_filling(size_t i, int puissance, size_t n, char *result)
 {
 	while (puissance > 1)
 	{
@@ -28,10 +28,10 @@ static	char	*ft_filling(int i, int puissance, int n, char *result)
 
 char			*ft_itoa(int n)
 {
-	int		size;
-	int		i;
-	char	*result;
-	int		puissance;
+	size_t		size;
+	size_t		i;
+	char		*result;
+	int			puissance;
 
 	if (n == -2147483648)
 		return (ft_strdup("-2147483648"));

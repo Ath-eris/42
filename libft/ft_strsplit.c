@@ -6,28 +6,26 @@
 /*   By: mbonati <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/16 20:50:47 by mbonati           #+#    #+#             */
-/*   Updated: 2018/11/19 07:36:01 by mbonati          ###   ########.fr       */
+/*   Updated: 2018/11/22 23:04:34 by mbonati          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 
-static	int		count_lett(char *word, char c)
+static	size_t		count_lett(char *word, char c)
 {
-	int i;
+	size_t i;
 
 	i = 0;
 	while (word[i] != c && word[i] != '\0')
-	{
 		i++;
-	}
 	return (i);
 }
 
-static	char	*ft_extract_word(char *str, int *i, char c)
+static	char		*ft_extract_word(char *str, size_t *i, char c)
 {
-	char	*word;
-	int		i_word;
+	char		*word;
+	size_t		i_word;
 
 	i_word = 0;
 	while (str[*i] == c)
@@ -44,10 +42,10 @@ static	char	*ft_extract_word(char *str, int *i, char c)
 	return (word);
 }
 
-static	int		ft_count_word(char *str, char c)
+static	size_t		ft_count_word(char *str, char c)
 {
-	int i;
-	int nbr_mots;
+	size_t i;
+	size_t nbr_mots;
 
 	i = 0;
 	nbr_mots = 0;
@@ -63,12 +61,12 @@ static	int		ft_count_word(char *str, char c)
 	return (nbr_mots);
 }
 
-char			**ft_strsplit(char *str, char c)
+char				**ft_strsplit(char *str, char c)
 {
-	int		i;
-	int		y;
-	int		hauteur_tab;
-	char	**tab;
+	size_t		i;
+	size_t		y;
+	size_t		hauteur_tab;
+	char		**tab;
 
 	hauteur_tab = ft_count_word(str, c);
 	if (!(tab = (char **)malloc(sizeof(char *) * hauteur_tab + 1)))

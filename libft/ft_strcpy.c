@@ -6,7 +6,7 @@
 /*   By: mbonati <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/12 12:10:43 by mbonati           #+#    #+#             */
-/*   Updated: 2018/11/17 17:56:26 by mbonati          ###   ########.fr       */
+/*   Updated: 2018/11/22 22:55:06 by mbonati          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 char	*ft_strcpy(char *dest, const char *src)
 {
-	int i;
+	size_t i;
 
 	i = 0;
 	while (src[i])

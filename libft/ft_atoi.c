@@ -6,7 +6,7 @@
 /*   By: mbonati <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/14 14:28:56 by mbonati           #+#    #+#             */
-/*   Updated: 2018/11/19 09:35:06 by mbonati          ###   ########.fr       */
+/*   Updated: 2018/11/22 23:02:49 by mbonati          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 int	ft_atoi(const char *str)
 {
-	int i;
-	int nb;
-	int signe;
+	size_t	i;
+	int		nb;
+	int		signe;
 
 	i = 0;
 	nb = 0;

@@ -6,7 +6,7 @@
 /*   By: mbonati <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/22 21:41:24 by mbonati           #+#    #+#             */
-/*   Updated: 2018/11/22 22:04:19 by mbonati          ###   ########.fr       */
+/*   Updated: 2018/11/22 22:51:32 by mbonati          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,6 @@ t_list	*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem))
 
 	while (lst->next != NULL)
 	{
-
+		
 	}
 }
