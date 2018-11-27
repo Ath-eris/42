@@ -6,11 +6,12 @@
 /*   By: mbonati <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/13 22:44:00 by mbonati           #+#    #+#             */
-/*   Updated: 2018/11/22 23:01:47 by mbonati          ###   ########.fr       */
+/*   Updated: 2018/11/27 23:42:11 by mbonati          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdlib.h>
 
 static	char	*ft_filling(size_t i, int puissance, size_t n, char *result)
 {
