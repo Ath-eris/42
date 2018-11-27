@@ -6,7 +6,7 @@
 /*   By: mbonati <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/12 17:28:46 by mbonati           #+#    #+#             */
-/*   Updated: 2018/11/22 22:57:19 by mbonati          ###   ########.fr       */
+/*   Updated: 2018/11/27 23:18:56 by mbonati          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	size_t			i;
 	char			*tab;
 
+	if (s == NULL)
+		return (NULL);
 	if (!(tab = malloc(sizeof(char) * (ft_strlen(s) + 1))))
 		return (NULL);
 	i = 0;

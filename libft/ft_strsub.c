@@ -6,7 +6,7 @@
 /*   By: mbonati <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/13 22:16:58 by mbonati           #+#    #+#             */
-/*   Updated: 2018/11/19 13:48:48 by mbonati          ###   ########.fr       */
+/*   Updated: 2018/11/27 23:15:24 by mbonati          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ char	*ft_strsub(char const *s, unsigned int start, size_t len)
 	size_t		i;
 	char		*tab;
 
+	if (s == NULL)
+		return (NULL);
 	if (!(tab = malloc(sizeof(char) * (len + 1))))
 		return (NULL);
 	i = 0;

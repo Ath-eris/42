@@ -6,7 +6,7 @@
 /*   By: mbonati <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/16 20:50:47 by mbonati           #+#    #+#             */
-/*   Updated: 2018/11/22 23:04:34 by mbonati          ###   ########.fr       */
+/*   Updated: 2018/11/27 23:17:47 by mbonati          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,6 +68,8 @@ char				**ft_strsplit(char *str, char c)
 	size_t		hauteur_tab;
 	char		**tab;
 
+	if (str == NULL)
+		return (NULL);
 	hauteur_tab = ft_count_word(str, c);
 	if (!(tab = (char **)malloc(sizeof(char *) * hauteur_tab + 1)))
 		return (NULL);

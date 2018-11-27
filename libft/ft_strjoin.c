@@ -6,7 +6,7 @@
 /*   By: mbonati <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/16 19:22:08 by mbonati           #+#    #+#             */
-/*   Updated: 2018/11/19 13:52:12 by mbonati          ###   ########.fr       */
+/*   Updated: 2018/11/27 23:16:06 by mbonati          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	size_t	y;
 	char	*tab;
 
+	if (!(s1 && s2))
+		return (NULL);
 	size = ft_strlen(s1) + ft_strlen(s2) + 1;
 	if (!(tab = malloc(sizeof(char) * size)))
 		return (NULL);
