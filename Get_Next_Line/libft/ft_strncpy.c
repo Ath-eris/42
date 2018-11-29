@@ -1,36 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line.c                                    :+:      :+:    :+:   */
+/*   ft_strncpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mbonati <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/28 17:05:53 by mbonati           #+#    #+#             */
-/*   Updated: 2018/11/29 17:25:24 by mbonati          ###   ########.fr       */
+/*   Created: 2018/11/12 13:19:29 by mbonati           #+#    #+#             */
+/*   Updated: 2018/11/19 14:42:52 by mbonati          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
-#include <string.h>
-#include <unistd.h>
+#include "libft.h"
 
-int get_next_line(const int fd, char **line)
+char	*ft_strncpy(char *dest, const char *src, size_t n)
 {
-	static size_t 	i;
-	ssize_t			ret;
-	char			buf[BUFF_SIZE + 1];
+	size_t i;
 
 	i = 0;
-	*line = NULL;
-	while (ft_strchr(buf, '\n') == NULL)
+	while (src[i] && i < n)
 	{
-		ret = read(fd, buf, BUFF_SIZE);
-		buf[ret] = '\0';
-		if (*line == NULL)
-			*line = ft_strdup(buf);
-		else
-			*line = ft_strjoin()
+		dest[i] = src[i];
+		i++;
 	}
-	*line = buf;
-	return (-1);
+	while (i < n)
+		dest[i++] = '\0';
+	return (dest);
 }

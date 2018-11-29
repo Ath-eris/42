@@ -1,36 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line.c                                    :+:      :+:    :+:   */
+/*   ft_putnbr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mbonati <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/28 17:05:53 by mbonati           #+#    #+#             */
-/*   Updated: 2018/11/29 17:25:24 by mbonati          ###   ########.fr       */
+/*   Created: 2018/11/14 14:43:09 by mbonati           #+#    #+#             */
+/*   Updated: 2018/11/20 17:04:06 by mbonati          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
-#include <string.h>
-#include <unistd.h>
+#include "libft.h"
 
-int get_next_line(const int fd, char **line)
+void	ft_putnbr(int n)
 {
-	static size_t 	i;
-	ssize_t			ret;
-	char			buf[BUFF_SIZE + 1];
-
-	i = 0;
-	*line = NULL;
-	while (ft_strchr(buf, '\n') == NULL)
+	if (n == -2147483648)
+		ft_putstr("-2147483648");
+	else
 	{
-		ret = read(fd, buf, BUFF_SIZE);
-		buf[ret] = '\0';
-		if (*line == NULL)
-			*line = ft_strdup(buf);
+		if (n < 0)
+		{
+			ft_putchar('-');
+			n = -n;
+		}
+		if (n >= 10)
+		{
+			ft_putnbr(n / 10);
+			ft_putnbr(n % 10);
+		}
 		else
-			*line = ft_strjoin()
+			ft_putchar(n + '0');
 	}
-	*line = buf;
-	return (-1);
 }

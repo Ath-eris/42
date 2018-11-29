@@ -1,36 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line.c                                    :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mbonati <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/28 17:05:53 by mbonati           #+#    #+#             */
-/*   Updated: 2018/11/29 17:25:24 by mbonati          ###   ########.fr       */
+/*   Created: 2018/11/14 14:28:56 by mbonati           #+#    #+#             */
+/*   Updated: 2018/11/27 23:49:03 by mbonati          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
-#include <string.h>
-#include <unistd.h>
+#include "libft.h"
 
-int get_next_line(const int fd, char **line)
+int	ft_atoi(const char *str)
 {
-	static size_t 	i;
-	ssize_t			ret;
-	char			buf[BUFF_SIZE + 1];
+	size_t	i;
+	int		nb;
+	int		signe;
 
 	i = 0;
-	*line = NULL;
-	while (ft_strchr(buf, '\n') == NULL)
-	{
-		ret = read(fd, buf, BUFF_SIZE);
-		buf[ret] = '\0';
-		if (*line == NULL)
-			*line = ft_strdup(buf);
-		else
-			*line = ft_strjoin()
-	}
-	*line = buf;
-	return (-1);
+	nb = 0;
+	signe = 1;
+	while (ft_isspace(str[i]))
+		i++;
+	if (str[i] == '+' || str[i] == '-')
+		signe = str[i++] == '-' ? -1 : 1;
+	while (str[i] >= '0' && str[i] <= '9')
+		nb = nb * 10 + str[i++] - '0';
+	return (nb * signe);
 }

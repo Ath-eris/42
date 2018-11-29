@@ -1,36 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line.c                                    :+:      :+:    :+:   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mbonati <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/28 17:05:53 by mbonati           #+#    #+#             */
-/*   Updated: 2018/11/29 17:25:24 by mbonati          ###   ########.fr       */
+/*   Created: 2018/11/14 17:30:21 by mbonati           #+#    #+#             */
+/*   Updated: 2018/11/19 12:41:53 by mbonati          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
-#include <string.h>
-#include <unistd.h>
+#include "libft.h"
 
-int get_next_line(const int fd, char **line)
+int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	static size_t 	i;
-	ssize_t			ret;
-	char			buf[BUFF_SIZE + 1];
+	size_t i;
 
 	i = 0;
-	*line = NULL;
-	while (ft_strchr(buf, '\n') == NULL)
-	{
-		ret = read(fd, buf, BUFF_SIZE);
-		buf[ret] = '\0';
-		if (*line == NULL)
-			*line = ft_strdup(buf);
-		else
-			*line = ft_strjoin()
-	}
-	*line = buf;
-	return (-1);
+	if (n == 0)
+		return (0);
+	while (((char *)s1)[i] == ((char *)s2)[i] && i < n - 1)
+		i++;
+	return (((unsigned char *)s1)[i] - ((unsigned char *)s2)[i]);
 }

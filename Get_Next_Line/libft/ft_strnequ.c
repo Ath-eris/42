@@ -1,36 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line.c                                    :+:      :+:    :+:   */
+/*   ft_strnequ.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mbonati <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/28 17:05:53 by mbonati           #+#    #+#             */
-/*   Updated: 2018/11/29 17:25:24 by mbonati          ###   ########.fr       */
+/*   Created: 2018/11/12 17:56:58 by mbonati           #+#    #+#             */
+/*   Updated: 2018/11/27 23:14:41 by mbonati          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
-#include <string.h>
-#include <unistd.h>
+#include "libft.h"
 
-int get_next_line(const int fd, char **line)
+int	ft_strnequ(char const *s1, char const *s2, size_t n)
 {
-	static size_t 	i;
-	ssize_t			ret;
-	char			buf[BUFF_SIZE + 1];
+	size_t	i;
 
+	if (!(s1 && s2))
+		return (0);
 	i = 0;
-	*line = NULL;
-	while (ft_strchr(buf, '\n') == NULL)
+	if (n == 0)
+		return (1);
+	while (s1[i] && s2[i] && i < n - 1)
 	{
-		ret = read(fd, buf, BUFF_SIZE);
-		buf[ret] = '\0';
-		if (*line == NULL)
-			*line = ft_strdup(buf);
-		else
-			*line = ft_strjoin()
+		if (s1[i] != s2[i])
+			return (0);
+		i++;
 	}
-	*line = buf;
-	return (-1);
+	if (s1[i] != s2[i])
+		return (0);
+	else
+		return (1);
 }

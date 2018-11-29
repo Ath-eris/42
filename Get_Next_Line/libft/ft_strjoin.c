@@ -1,36 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line.c                                    :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mbonati <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/28 17:05:53 by mbonati           #+#    #+#             */
-/*   Updated: 2018/11/29 17:25:24 by mbonati          ###   ########.fr       */
+/*   Created: 2018/11/16 19:22:08 by mbonati           #+#    #+#             */
+/*   Updated: 2018/11/27 23:36:58 by mbonati          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
-#include <string.h>
-#include <unistd.h>
+#include "libft.h"
+#include <stdlib.h>
 
-int get_next_line(const int fd, char **line)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-	static size_t 	i;
-	ssize_t			ret;
-	char			buf[BUFF_SIZE + 1];
+	size_t	size;
+	size_t	i;
+	size_t	y;
+	char	*tab;
 
+	if (!(s1 && s2))
+		return (NULL);
+	size = ft_strlen(s1) + ft_strlen(s2) + 1;
+	if (!(tab = malloc(sizeof(char) * size)))
+		return (NULL);
 	i = 0;
-	*line = NULL;
-	while (ft_strchr(buf, '\n') == NULL)
+	while (s1[i])
 	{
-		ret = read(fd, buf, BUFF_SIZE);
-		buf[ret] = '\0';
-		if (*line == NULL)
-			*line = ft_strdup(buf);
-		else
-			*line = ft_strjoin()
+		tab[i] = s1[i];
+		i++;
 	}
-	*line = buf;
-	return (-1);
+	y = 0;
+	while (s2[y])
+	{
+		tab[i + y] = s2[y];
+		y++;
+	}
+	tab[i + y] = '\0';
+	return (tab);
 }

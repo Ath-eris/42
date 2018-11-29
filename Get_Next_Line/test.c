@@ -1,36 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line.c                                    :+:      :+:    :+:   */
+/*   test.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mbonati <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/28 17:05:53 by mbonati           #+#    #+#             */
-/*   Updated: 2018/11/29 17:25:24 by mbonati          ###   ########.fr       */
+/*   Created: 2018/11/29 14:43:30 by mbonati           #+#    #+#             */
+/*   Updated: 2018/11/29 15:16:31 by mbonati          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
-#include <string.h>
 #include <unistd.h>
+#include <fcntl.h>
+#include <stdio.h>
 
-int get_next_line(const int fd, char **line)
+int	main()
 {
-	static size_t 	i;
-	ssize_t			ret;
-	char			buf[BUFF_SIZE + 1];
-
-	i = 0;
-	*line = NULL;
-	while (ft_strchr(buf, '\n') == NULL)
-	{
-		ret = read(fd, buf, BUFF_SIZE);
-		buf[ret] = '\0';
-		if (*line == NULL)
-			*line = ft_strdup(buf);
-		else
-			*line = ft_strjoin()
-	}
-	*line = buf;
-	return (-1);
+	const char *file = "fichier_test.txt";
+	char buf[300];
+	int fd = open(file, O_RDONLY);
+	ssize_t int_read = read(fd, buf, 300);
+	
+	printf("%zd", int_read);
+	write(1, buf, int_read);
+	return (0);
 }

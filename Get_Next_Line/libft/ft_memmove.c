@@ -1,36 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line.c                                    :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mbonati <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/28 17:05:53 by mbonati           #+#    #+#             */
-/*   Updated: 2018/11/29 17:25:24 by mbonati          ###   ########.fr       */
+/*   Created: 2018/11/14 17:41:03 by mbonati           #+#    #+#             */
+/*   Updated: 2018/11/19 13:33:15 by mbonati          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
-#include <string.h>
-#include <unistd.h>
+#include "libft.h"
 
-int get_next_line(const int fd, char **line)
+void	*ft_memmove(void *dest, const void *src, size_t n)
 {
-	static size_t 	i;
-	ssize_t			ret;
-	char			buf[BUFF_SIZE + 1];
+	size_t	i;
+	char	*dest_c;
+	char	*src_c;
 
-	i = 0;
-	*line = NULL;
-	while (ft_strchr(buf, '\n') == NULL)
+	i = n;
+	dest_c = (char *)dest;
+	src_c = (char *)src;
+	if (src_c < dest_c)
 	{
-		ret = read(fd, buf, BUFF_SIZE);
-		buf[ret] = '\0';
-		if (*line == NULL)
-			*line = ft_strdup(buf);
-		else
-			*line = ft_strjoin()
+		while (i-- > 0)
+			dest_c[i] = src_c[i];
 	}
-	*line = buf;
-	return (-1);
+	i = 0;
+	if (src_c > dest_c)
+	{
+		while (i < n)
+		{
+			dest_c[i] = src_c[i];
+			i++;
+		}
+	}
+	return (dest);
 }

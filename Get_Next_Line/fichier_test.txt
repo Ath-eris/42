@@ -1,6 +1,6 @@
-Première ligne : un deux trois quatre cinq six sexpt huit
-Deuxième ligne : un deux trois quatre cinq six sexpt huit
-Troisième ligne : un deux trois quatre cinq six sexpt huit
-Quatrième ligne : un deux trois quatre cinq six sexpt huit
-Cinquième ligne : un deux trois quatre cinq six sexpt huit
+Première ligne : un deux trois quatre cinq six sept huit
+Deuxième ligne : un deux trois quatre cinq six sept huit
+Troisième ligne : un deux trois quatre cinq six sept huit
+Quatrième ligne : un deux trois quatre cinq six sept huit
+Cinquième ligne : un deux trois quatre cinq six sept huit
 

@@ -1,36 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line.c                                    :+:      :+:    :+:   */
+/*   ft_strncat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mbonati <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/28 17:05:53 by mbonati           #+#    #+#             */
-/*   Updated: 2018/11/29 17:25:24 by mbonati          ###   ########.fr       */
+/*   Created: 2018/11/12 14:45:49 by mbonati           #+#    #+#             */
+/*   Updated: 2018/11/12 15:43:07 by mbonati          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
-#include <string.h>
-#include <unistd.h>
+#include "libft.h"
 
-int get_next_line(const int fd, char **line)
+char	*ft_strncat(char *dest, const char *src, size_t n)
 {
-	static size_t 	i;
-	ssize_t			ret;
-	char			buf[BUFF_SIZE + 1];
+	size_t	i;
+	size_t	i_dest;
 
 	i = 0;
-	*line = NULL;
-	while (ft_strchr(buf, '\n') == NULL)
+	i_dest = 0;
+	while (dest[i_dest])
+		i_dest++;
+	while (i < n && src[i])
 	{
-		ret = read(fd, buf, BUFF_SIZE);
-		buf[ret] = '\0';
-		if (*line == NULL)
-			*line = ft_strdup(buf);
-		else
-			*line = ft_strjoin()
+		dest[i_dest] = src[i];
+		i_dest++;
+		i++;
 	}
-	*line = buf;
-	return (-1);
+	dest[i_dest] = '\0';
+	return (dest);
 }

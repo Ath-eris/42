@@ -1,17 +1,30 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main_gnl.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mbonati <marvin@42.fr>                     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2018/11/28 17:22:57 by mbonati           #+#    #+#             */
+/*   Updated: 2018/11/29 16:28:09 by mbonati          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include <stdio.h>
+#include <fcntl.h>
+
 int get_next_line(const int fd, char **line);
 
-int main(int ac, char **av)
+int main()
 {
-  const char *file = "/home/mathilde/42/Get_Next_Line/fichier_test.txt";
-  int x = 7;
-  char *buf;
+  const char *file = "fichier_test.txt";
+  char *line;
 
-  FILE *fd = fopen(file, "w");
+  int fd = open(file, O_RDONLY);
   if (fd)
   {
-    get_next_line((const int)fd, &buf);
-    printf("Ligne lue : %s\n", buf);
-    printf("Retour GNL : %d\n", get_next_line((const int)fd, &buf));
+    printf("Retour GNL : %d\n", get_next_line(fd, &line));
+    printf("Ligne lue : %s\n", line);
   }
   else
     printf("Erreur");
