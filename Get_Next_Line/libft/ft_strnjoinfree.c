@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: mbonati <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/12/01 21:47:55 by mbonati           #+#    #+#             */
-/*   Updated: 2018/12/01 22:14:30 by mbonati          ###   ########.fr       */
+/*   Created: 2018/12/01 23:34:28 by mbonati           #+#    #+#             */
+/*   Updated: 2018/12/01 23:35:31 by mbonati          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ char	*ft_strnjoinfree(char *s1, char *s2, size_t n, int x)
 		i++;
 	}
 	y = 0;
-	while (s2[y++] && y < n)
+	while (s2[y] && y < n)
 	{
 		tab[i + y] = s2[y];
 		y++;
