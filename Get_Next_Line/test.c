@@ -1,27 +1,19 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   test.c                                             :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: mbonati <marvin@42.fr>                     +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/29 14:43:30 by mbonati           #+#    #+#             */
-/*   Updated: 2018/11/29 17:37:30 by mbonati          ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
+#include <stdio.h>
 #include <unistd.h>
 #include <fcntl.h>
-#include <stdio.h>
 
-int	main()
+int main(int ac, char **av)
 {
-	const char *file = "fichier_test.txt";
 	char buf[300];
+	const char *file = av[1];
 	int fd = open(file, O_RDONLY);
-	ssize_t int_read = read(fd, buf, 300);
-	
-	printf("%zd", int_read);
-	write(1, buf, int_read);
-	return (0);
+	if (ac)
+	{
+		read(fd, buf, 10);
+		printf("1) %s\n", buf);
+		read(fd, buf, 10);
+		printf("2) %s\n", buf);
+		read(fd, buf, 10);
+		printf("3) %s\n", buf);
+	}
 }
