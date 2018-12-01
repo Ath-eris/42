@@ -6,7 +6,7 @@
 /*   By: mbonati <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/28 17:22:57 by mbonati           #+#    #+#             */
-/*   Updated: 2018/12/01 19:24:16 by mbonati          ###   ########.fr       */
+/*   Updated: 2018/12/01 22:58:03 by mbonati          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,13 +24,13 @@ int main(int ac, char **av)
   if (fd && ac)
   {
     get_next_line(fd, &line);
-    printf("Ligne lue : %s\n", line);
+    //printf("Ligne lue : %s\n", line);
     get_next_line(fd, &line);
-    printf("Ligne lue : %s\n", line);
+    //printf("Ligne lue : %s\n", line);
     get_next_line(fd, &line);
-    printf("Ligne lue : %s\n", line);
+    //printf("Ligne lue : %s\n", line);
     get_next_line(fd, &line);
-    printf("Ligne lue : %s\n", line);
+    //printf("Ligne lue : %s\n", line);
   }
   else
     printf("Erreur");

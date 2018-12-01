@@ -6,7 +6,7 @@
 /*   By: mbonati <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/10 11:33:18 by mbonati           #+#    #+#             */
-/*   Updated: 2018/11/27 23:29:39 by mbonati          ###   ########.fr       */
+/*   Updated: 2018/12/01 22:10:23 by mbonati          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,5 +86,7 @@ void				ft_lstadd(t_list **alst, t_list *new);
 void				ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 void				ft_lstaddend(t_list **alst, t_list *new);
+char				*ft_strnjoinfree(char *s1, char *s2, size_t n, int x);
+char				*ft_strjoinfree(char *s1, char *s2, int x);
 
 #endif

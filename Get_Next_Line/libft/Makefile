@@ -6,7 +6,7 @@
 #    By: mbonati <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/12 10:33:17 by mbonati           #+#    #+#              #
-#    Updated: 2018/11/22 23:42:46 by mbonati          ###   ########.fr        #
+#    Updated: 2018/12/01 22:07:02 by mbonati          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -77,6 +77,8 @@ FILE = ft_putendl_fd.c\
 	   ft_lstiter.c\
 	   ft_lstmap.c\
 	   ft_lstaddend.c\
+	   ft_strjoinfree.c\
+	   ft_strnjoinfree.c\
 
 OBJET = $(FILE:.c=.o)
 
