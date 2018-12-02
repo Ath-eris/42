@@ -16,11 +16,19 @@
 #include <stdlib.h>
 #include "libft/libft.h"
 
+int 	check_error(int ret)
+{
+	if (ret == 0)
+		return (0);
+	if (ret < 0)
+		return (-1);
+}
+
 char	*buf_split(char *buf, char **line)
 {
 	size_t i;
 
-	i = 0;	
+	i = 0;
 	while (buf[i] != '\n')
 		i++;
 	if (*line == NULL)
@@ -45,20 +53,17 @@ int get_next_line(const int fd, char **line)
 		ft_memset(buf, 0, BUFF_SIZE + 1);
 	}
 	if (ft_strchr(buf, '\n') != NULL)
-	{
 		buf = buf_split(buf, line);
-		return (1);
-	}
 	else
 	{
 		ret = read(fd, buf, BUFF_SIZE);
+		if (ret == 0)
+			return (0);
+		if (ret < 0)
+			return (-1);
 		buf[ret] = '\0';
 		while (ft_strchr(buf, '\n') == NULL)
 		{
-			if (ret == 0)
-				return (0);
-			if (ret < 0)
-				return (-1);
 			if (*line == NULL)
 				*line = ft_strdup(buf);
 			else
