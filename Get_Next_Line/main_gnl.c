@@ -6,7 +6,7 @@
 /*   By: mbonati <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/28 17:22:57 by mbonati           #+#    #+#             */
-/*   Updated: 2018/12/01 23:37:18 by mbonati          ###   ########.fr       */
+/*   Updated: 2018/12/03 19:20:25 by mbonati          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,13 +23,29 @@ int main(int ac, char **av)
   int fd = open(file, O_RDONLY);
   if (fd && ac)
   {
-    get_next_line(fd, &line);
+    printf("Retour : %d\n", get_next_line(fd, &line));
     printf("Ligne lue : %s\n", line);
-    get_next_line(fd, &line);
+    printf("Retour : %d\n", get_next_line(fd, &line));
     printf("Ligne lue : %s\n", line);
-    get_next_line(fd, &line);
+    printf("Retour : %d\n", get_next_line(fd, &line));
     printf("Ligne lue : %s\n", line);
-    get_next_line(fd, &line);
+    printf("Retour : %d\n", get_next_line(fd, &line));
+    printf("Ligne lue : %s\n", line);
+    printf("Retour : %d\n", get_next_line(fd, &line));
+    printf("Ligne lue : %s\n", line);
+    printf("Retour : %d\n", get_next_line(fd, &line));
+    printf("Ligne lue : %s\n", line);
+    printf("Retour : %d\n", get_next_line(fd, &line));
+    printf("Ligne lue : %s\n", line);
+    printf("Retour : %d\n", get_next_line(fd, &line));
+    printf("Ligne lue : %s\n", line);
+    printf("Retour : %d\n", get_next_line(fd, &line));
+    printf("Ligne lue : %s\n", line);
+    printf("Retour : %d\n", get_next_line(fd, &line));
+    printf("Ligne lue : %s\n", line);
+    printf("Retour : %d\n", get_next_line(fd, &line));
+    printf("Ligne lue : %s\n", line);
+    printf("Retour : %d\n", get_next_line(fd, &line));
     printf("Ligne lue : %s\n", line);
   }
   else
