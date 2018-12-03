@@ -6,7 +6,7 @@
 /*   By: mbonati <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/03 22:06:28 by mbonati           #+#    #+#             */
-/*   Updated: 2018/12/03 22:51:09 by mbonati          ###   ########.fr       */
+/*   Updated: 2018/12/03 23:36:43 by mbonati          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,12 +41,15 @@ int			get_next_line(const int fd, char **line)
 	*line = NULL;
 	if (buf == NULL)
 		if (!(buf = ft_memalloc(BUFF_SIZE + 1)))
-			return (-1);
+			return (1);
 	while (buf_split(buf, line))
 	{
 		if (!(ret_read = read(fd, buf, BUFF_SIZE)))
-			if (*line == NULL)
-				return (0);
+		{
+			if (*line != NULL)
+				return (1);                  //gerer le cas ou pas de \n dans le fichier
+			return (0);
+		}
 		if (ret_read == -1)
 			return (-1);
 		buf[ret_read] = '\0';
