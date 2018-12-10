@@ -6,7 +6,7 @@
 /*   By: mbonati <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/10 11:33:18 by mbonati           #+#    #+#             */
-/*   Updated: 2018/12/03 22:09:59 by mbonati          ###   ########.fr       */
+/*   Updated: 2018/12/10 19:36:42 by mbonati          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,5 +87,7 @@ void				ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 void				ft_lstaddend(t_list **alst, t_list *new);
 char				*ft_strjoinfree(char *s1, char *s2, int x);
+int					get_next_line(const int fd, char **line);
+# define BUFF_SIZE 5000
 
 #endif
